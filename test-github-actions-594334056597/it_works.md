@@ -7,6 +7,4 @@ This is the second test to see if it worked!
 
 This line should reflect in S3.
 
-After using Hard coded ENV Variables. Re testing this line as it is inside the folder
-
-Check1
+After using Hard coded ENV Variables. Added checkout master step 
