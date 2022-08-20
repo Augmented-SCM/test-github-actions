@@ -7,4 +7,6 @@ This is the second test to see if it worked!
 
 This line should reflect in S3.
 
-After using Hard coded ENV Variables. Added checkout master step 
+After using Hard coded ENV Variables. Added checkout master step.
+
+Added paths to push branch 
