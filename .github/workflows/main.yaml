@@ -11,9 +11,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
-      - run: aws s3 sync test-github-actions-594334056597/ s3://test-github-actions-594334056597
+      - run: aws s3 sync $S3_DIRECTORY $AWS_S3_BUCKET
     env:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        S3_DIRECTORY: ${{ secrets.S3_DIRECTORY }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
