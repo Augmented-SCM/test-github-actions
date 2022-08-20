@@ -30,6 +30,6 @@ jobs:
       # - run: aws s3 sync test-github-actions-594334056597/ s3://test-github-actions-594334056597
       # - run: echo "${{env.S3_DIRECTORY}}"
 
-      - uses: 
+      - uses: actions/checkout@secondary
       - run: echo “Overwriting the existing text in the file” > test-github-actions-594334056597/testfile.txt
       - run: make git m="Checking_automatic"
