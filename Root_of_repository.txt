@@ -1,3 +1,0 @@
-This text file is in the Root of the repository.
-
-This line should not get pushed to S3.
