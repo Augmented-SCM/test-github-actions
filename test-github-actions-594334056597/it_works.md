@@ -9,4 +9,6 @@ This line should reflect in S3.
 
 After using Hard coded ENV Variables. Added checkout master step.
 
-Added paths to push branch 
+Added paths to push branch.
+
+Added single quotes around paths
