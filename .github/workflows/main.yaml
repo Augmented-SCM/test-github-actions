@@ -9,9 +9,6 @@ jobs:
   sync_repository:
     runs-on: self-hosted
 
-    steps:
-      - uses: actions/checkout@master
-      - run: aws s3 sync ${{env.S3_DIRECTORY}} ${{env.AWS_S3_BUCKET}}
     env:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         S3_DIRECTORY: ${{ secrets.S3_DIRECTORY }}
@@ -20,3 +17,9 @@ jobs:
         AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
         AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
         # SOURCE_DIR: 'public' 
+
+    steps:
+      - uses: actions/checkout@master
+      # - run: aws s3 sync ${{env.S3_DIRECTORY}} ${{env.AWS_S3_BUCKET}}
+      - run: echo ${{env.S3_DIRECTORY}}
+    
