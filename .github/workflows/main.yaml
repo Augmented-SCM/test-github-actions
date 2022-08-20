@@ -5,7 +5,7 @@ on:
   branches:
    - master
   paths:
-   - test-github-actions-594334056597/
+   - test-github-actions-594334056597/**
 
 jobs:
   sync_repository:
