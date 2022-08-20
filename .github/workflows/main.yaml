@@ -12,7 +12,7 @@ jobs:
     env:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         S3_DIRECTORY: ${{ secrets.S3_DIRECTORY }}
-        AWS_S3_BUCKET_CHECK: s3://test-github-actions-594334054597
+        AWS_S3_BUCKET_CHECK: s3://test-github-actions-594334056597
         S3_DIRECTORY_CHECK: test-github-actions-594334056597/
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
