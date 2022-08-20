@@ -1,4 +1,4 @@
 git:
 	git add .
-	git commit -m "$t" -m "$b"
+	git commit -m "$m" -m "$b"
 	git push
