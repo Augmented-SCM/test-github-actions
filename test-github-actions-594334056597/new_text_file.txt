@@ -1,0 +1,1 @@
+This is the text file which should show up in S3
