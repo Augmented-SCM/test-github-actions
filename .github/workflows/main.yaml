@@ -20,6 +20,6 @@ jobs:
 
     steps:
       # - uses: actions/checkout@master
-      # - run: aws s3 sync ${{env.S3_DIRECTORY}} ${{env.AWS_S3_BUCKET}}
-      - run: echo "${{env.S3_DIRECTORY}}"
+      - run: aws s3 sync ${{env.S3_DIRECTORY}} ${{env.AWS_S3_BUCKET}}
+      # - run: echo "${{env.S3_DIRECTORY}}"
     
