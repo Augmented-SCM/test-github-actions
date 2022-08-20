@@ -10,6 +10,14 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Sync the whole repository s3
-        run: aws s3 sync test-github-actions-594334056597 s3://test-github-actions-594334056597
-
+      - uses: actions/checkout@master
+      - uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
+    env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
+        AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
+        # SOURCE_DIR: 'public' 
