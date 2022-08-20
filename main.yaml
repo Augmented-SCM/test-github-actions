@@ -1,0 +1,15 @@
+name: testing_webhook_with_s3
+
+on: 
+ push:
+  branches:
+   - master
+
+jobs:
+  sync_repository:
+    runs-on: self-hosted
+
+    steps:
+      - name: Sync the whole repository s3
+        run: aws s3 sync test-github-actions-594334056597 s3://test-github-actions-594334056597
+
