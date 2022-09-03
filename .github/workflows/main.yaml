@@ -26,16 +26,18 @@ jobs:
 
       # In order to access folders from github repository, you need to specify this line.
       - uses: actions/checkout@master
+        with: 
+          ref: master
+      - run: aws s3 sync ${{env.S3_DIRECTORY}} ${{env.AWS_S3_BUCKET}}
       # - with:
       #     token: $${{secrets.PAT}}
-      - run: aws s3 sync ${{env.S3_DIRECTORY}} ${{env.AWS_S3_BUCKET}}
       # - run: aws s3 sync test-github-actions-594334056597/ s3://test-github-actions-594334056597
 
       - uses: actions/checkout@master
         with: 
           ref: secondary
 
-      - run: git merge master
+      - run: git merge origin/master
       - run: git commit -m "Merging from master"
       - run: git push
       # - run: echo “Overwriting the existing text in the file” > test-github-actions-594334056597/testfile.txt
