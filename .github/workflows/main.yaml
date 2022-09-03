@@ -24,7 +24,6 @@ jobs:
 
     steps:
 
-      - name : Checkout_Master_sync_s3
       # In order to access folders from github repository, you need to specify this line.
       - uses: actions/checkout@master
       # - with:
@@ -32,10 +31,10 @@ jobs:
       - run: aws s3 sync ${{env.S3_DIRECTORY}} ${{env.AWS_S3_BUCKET}}
       # - run: aws s3 sync test-github-actions-594334056597/ s3://test-github-actions-594334056597
 
-      - name: Checkout_Secondary_Branch
       - uses: actions/checkout@secondary
 
       - run: git merge master
       - run: git commit -m "Merging from master"
+      - run: git push
       # - run: echo “Overwriting the existing text in the file” > test-github-actions-594334056597/testfile.txt
       # - run: make git m="Checking_automatic"
