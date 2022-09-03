@@ -37,7 +37,7 @@ jobs:
         with: 
           ref: secondary
 
-      - run: git pull origin master --allow-unrelated-histories
+      - run: git pull origin master 
       # - run: git commit -m "Merging from master"
       # - run: git push
       # - run: echo “Overwriting the existing text in the file” > test-github-actions-594334056597/testfile.txt
