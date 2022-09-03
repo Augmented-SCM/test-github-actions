@@ -33,6 +33,8 @@ jobs:
 
       # - run: echo "${{env.S3_DIRECTORY}}"
 
-      # - uses: actions/checkout@secondary
+      - uses: actions/checkout@secondary
+      - run: git merge master
+      - run: git commit -m "Merging from master"
       # - run: echo “Overwriting the existing text in the file” > test-github-actions-594334056597/testfile.txt
       # - run: make git m="Checking_automatic"
