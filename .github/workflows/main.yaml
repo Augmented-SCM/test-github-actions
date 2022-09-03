@@ -9,7 +9,7 @@ on:
 
 jobs:
   sync_repository:
-    runs-on: self-hosted
+    runs-on: [self-hosted, X64, Windows, learning ]
 
     env:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
