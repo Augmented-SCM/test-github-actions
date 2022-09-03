@@ -1,1 +1,3 @@
 This is the text file which should show up in S3
+
+This is a new line which should get updated in S3.
