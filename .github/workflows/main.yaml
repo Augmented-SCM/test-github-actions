@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@master
       # - with:
       #     token: $${{secrets.PAT}}
-      - run: aws s3 sync ${{env.S3_DIRECTORY_CHECK}} ${{env.AWS_S3_BUCKET_CHECK}}
+      - run: aws s3 sync ${{env.S3_DIRECTORY}} ${{env.AWS_S3_BUCKET}}
       # - run: aws s3 sync test-github-actions-594334056597/ s3://test-github-actions-594334056597
 
       # - run: echo "${{env.S3_DIRECTORY}}"
