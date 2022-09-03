@@ -37,8 +37,8 @@ jobs:
         with: 
           ref: secondary
 
-      - run: git merge origin/master
-      - run: git commit -m "Merging from master"
-      - run: git push
+      - run: git pull origin master
+      # - run: git commit -m "Merging from master"
+      # - run: git push
       # - run: echo “Overwriting the existing text in the file” > test-github-actions-594334056597/testfile.txt
       # - run: make git m="Checking_automatic"
