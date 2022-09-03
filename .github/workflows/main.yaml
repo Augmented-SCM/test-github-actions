@@ -26,16 +26,14 @@ jobs:
 
       # In order to access folders from github repository, you need to specify this line.
       - name: Sync Master to S3
-      - uses: actions/checkout@master
-        with: 
-          ref: master
+        uses: actions/checkout@v3
       - run: aws s3 sync ${{env.S3_DIRECTORY}} ${{env.AWS_S3_BUCKET}}
       # - with:
       #     token: $${{secrets.PAT}}
       # - run: aws s3 sync test-github-actions-594334056597/ s3://test-github-actions-594334056597
 
       - name: Merge to secondary
-      - uses: actions/checkout@master
+        uses: actions/checkout@master
         with: 
           ref: secondary
 
