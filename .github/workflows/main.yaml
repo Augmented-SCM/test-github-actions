@@ -32,6 +32,8 @@ jobs:
       # - run: aws s3 sync test-github-actions-594334056597/ s3://test-github-actions-594334056597
 
       - uses: actions/checkout@secondary
+        with: 
+          ref: secondary
 
       - run: git merge master
       - run: git commit -m "Merging from master"
